@@ -3,7 +3,7 @@ import {View, Text, Image, TextInput, ImageSourcePropType} from 'react-native';
 
 import {COLORS, FONTS, SIZES, assets} from '../constants';
 
-const HomeHeader = ({onSearch}: {onSearch: () => void}) => {
+const HomeHeader = ({onSearch}: {onSearch: (value: string) => void}) => {
   return (
     <View
       style={{

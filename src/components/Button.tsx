@@ -4,9 +4,10 @@ import {COLORS, SIZES, FONTS, SHADOWS} from '../constants';
 
 interface ICircleButtonProps {
   imgUrl: string;
-  handlePress: () => void;
-  right: number;
-  top: number;
+  handlePress?: () => void;
+  right?: number;
+  top?: number;
+  left?: number;
 }
 
 export const CircleButton = ({

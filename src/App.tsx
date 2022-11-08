@@ -3,8 +3,9 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import React from 'react';
 import Home from './screens/Home';
 import Details from './screens/Details';
+import {RootStackParamList} from './types';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 const theme = {
   ...DefaultTheme,
   colors: {

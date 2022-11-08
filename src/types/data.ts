@@ -8,7 +8,7 @@ interface INFTData {
   bids: IBid[];
 }
 
-interface IBid {
+export interface IBid {
   id: string;
   name: string;
   price: number;

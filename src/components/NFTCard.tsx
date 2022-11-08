@@ -1,14 +1,18 @@
 import React from 'react';
 import {View, Text, Image, ImageSourcePropType} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from '../types';
 import {INFTData} from '../types/data';
 import {CircleButton, RectButton} from './Button';
 import {SubInfo, EthPrice, NFTTitle} from './SubInfo';
 
 import {COLORS, SIZES, SHADOWS, assets} from '../constants';
 
+type NavigationProps = StackNavigationProp<RootStackParamList>;
+
 const NFTCard = ({data}: {data: INFTData}) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
   return (
     <View
       style={{
@@ -58,7 +62,7 @@ const NFTCard = ({data}: {data: INFTData}) => {
           <RectButton
             minWidth={120}
             fontSize={SIZES.font}
-            handlePress={() => navigation.navigate('Details', {data})}
+            handlePress={() => navigation.navigate('Details', data)}
           />
         </View>
       </View>

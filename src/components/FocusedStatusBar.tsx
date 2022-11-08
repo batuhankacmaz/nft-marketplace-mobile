@@ -6,7 +6,7 @@ type FocusedStatusBarProps = {
   background: string;
 };
 
-const FocusedStatusBar = (props: FocusedStatusBarProps) => {
+const FocusedStatusBar = ({...props}) => {
   const IsFocused = useIsFocused();
   console.log('IsFocused', IsFocused);
   return IsFocused ? <StatusBar animated={true} {...props} /> : null;
